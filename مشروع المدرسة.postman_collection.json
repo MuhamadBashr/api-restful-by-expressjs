@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "0c5a311b-f646-4f99-9820-d8f64e2d28fb",
+		"name": "مشروع المدرسة",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "عرض المدرسين",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1995.1.1",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "sakaka",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a7007001@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Passward",
+							"value": "Aa6243240",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/t",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t"
+					]
+				},
+				"description": "تستخدم للعرض المدرسين لا توجب تسجيل دخول للمدرسين"
+			},
+			"response": []
+		},
+		{
+			"name": "تسجيل دخول للمدرسين ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "a7007001@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Passward",
+							"value": "Aa6243240",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/t/r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t",
+						"r"
+					]
+				},
+				"description": "تقوم هذا بعمل تسجيل دخول للكل مدرس و اعطائه توكن"
+			},
+			"response": []
+		},
+		{
+			"name": "تسجيل الطلاب",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTFkMjBjNGIwMTc3NDRjZTg5MWNkMTEiLCJpYXQiOjE1Nzg5Njc1NTksImV4cCI6MTU3ODk2NzU4OX0.1q4w-KvvCXM-9ZBAJKeB9P8TGJtbE9Fo9WwBwU_KYs8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "محمدبشر ",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1995.5.4",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "سكاكا",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a7007001@c.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"s"
+					]
+				},
+				"description": "هذا المسار يوم بتجيل الطلاب لا بد من وجود توكن المدرس قبل الادخال\n"
+			},
+			"response": []
+		},
+		{
+			"name": "عرض الطلاب ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/s",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"s"
+					]
+				},
+				"description": "تستخدم للعرض الطلاب لا بد من توكن "
+			},
+			"response": []
+		},
+		{
+			"name": "حذف الطلاب",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/s/5e1d203fb017744ce891cd0e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"s",
+						"5e1d203fb017744ce891cd0e"
+					]
+				},
+				"description": "تقوم هذا بحذف الطلاب لا بد من توكن"
+			},
+			"response": []
+		},
+		{
+			"name": "تعديل الطلاب",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "محمدبشر",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1995.5.4",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "sakaka",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a7007001@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/s/5e1d221a6660062678244a87",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"s",
+						"5e1d221a6660062678244a87"
+					]
+				},
+				"description": "تقوم بتعديل على بيانات الطلاب لا بد من توكن"
+			},
+			"response": []
+		},
+		{
+			"name": "عرض المدرسين",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1995.1.1",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "sakaka",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "a7007001@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "Passward",
+							"value": "Aa6243240",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/t",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t"
+					]
+				},
+				"description": "تقوم هذا بتسجيل المدرسين لا يشطرط و جود التوكن"
+			},
+			"response": []
+		},
+		{
+			"name": "عرض المدرسين",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/t",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t"
+					]
+				},
+				"description": "تقوم هذا بعرض المدرسين لا تشطرط التوكن"
+			},
+			"response": []
+		},
+		{
+			"name": "تقوم بحذف المدرسين ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/t/5e1d20c4b017744ce891cd11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t",
+						"5e1d20c4b017744ce891cd11"
+					]
+				},
+				"description": "لا بد من توكن"
+			},
+			"response": []
+		},
+		{
+			"name": "التعديل على المدرسين",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/t/5e1d1eb8b017744ce891cd0d?name=محمدبشر&birthday=1995.1.5&city=سكاكا&email=a7007001@gmak.com&Passward=Aa6243240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"t",
+						"5e1d1eb8b017744ce891cd0d"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "محمدبشر"
+						},
+						{
+							"key": "birthday",
+							"value": "1995.1.5"
+						},
+						{
+							"key": "city",
+							"value": "سكاكا"
+						},
+						{
+							"key": "email",
+							"value": "a7007001@gmak.com"
+						},
+						{
+							"key": "Passward",
+							"value": "Aa6243240"
+						}
+					]
+				},
+				"description": "تقوم هذا بالتعديل على المدرسين لا بد من توكن"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
